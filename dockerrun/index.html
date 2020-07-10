@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://projects.pasztor.at/containerssh/dockerrun/">
+  <link rel="shortcut icon" href="../img/favicon.png">
+  
+  <title>The dockerrun Backend - ContainerSSH: An SSH Server That Launches Containers</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../css/custom.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "The dockerrun Backend";
+    var mkdocs_page_input_path = "dockerrun.md";
+    var mkdocs_page_url = "/containerssh/dockerrun/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="ContainerSSH: An SSH Server that Launches Containers" />
+<meta property="og:title" content="The dockerrun Backend"/>
+<meta property="og:image" content="https://projects.pasztor.at/containerssh/img/opengraph.png" />
+<meta property="og:url" content="https://projects.pasztor.at/containerssh/dockerrun/" />
+<meta property="og:description" content="ContainerSSH is an SSH server that launches containers in Docker and Kubernetes." />
+
+<link rel="apple-touch-icon-precomposed" href="https://projects.pasztor.at/containerssh/img/tileicon.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="ContainerSSH is an SSH server that launches containers in Docker and Kubernetes." />
+<meta name="twitter:site" content="@janoszen" />
+<meta name="twitter:title" content="ContainerSSH" />
+<meta name="twitter:image" content="https://projects.pasztor.at/containerssh/img/opengraph.png" />
+<meta name="theme-color" content="#da291c" />
+<meta name="msapplication-navbutton-color" content="#da291c" />
+<meta name="application-name" content="ContainerSSH" />
+<meta name="msapplication-starturl" content="/" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="msapplication-TileImage" content="https://projects.pasztor.at/containerssh/img/tileicon.png' | url }}" />
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ContainerSSH: An SSH Server That Launches Containers</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../authserver/">Authentication Server</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../configserver/">Configuration Server</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../backends/">Selecting a Backend</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">The dockerrun Backend</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../kuberun/">The kuberun Backend</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../image/">Creating an Image</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hardening/">Hardening</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">API reference</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../api/authconfig/">The AuthConfig Server ⭧</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ContainerSSH: An SSH Server That Launches Containers</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>The dockerrun Backend</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/janoszen/containerssh/edit/stable/docs/dockerrun.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1>The <code>dockerrun</code> backend</h1>
+
+<p>The <code>dockerrun</code> backend launches a container using the Docker API</p>
+<h2 id="providing-certificates">Providing certificates<a class="headerlink" href="#providing-certificates" title="Permanent link">&para;</a></h2>
+<p>Docker sockets allow connections over TCP with TLS encryption. You can provide these TLS certificates embedded in the
+YAML file in PEM format:</p>
+<pre><code class="yaml">dockerrun:
+  host: tcp://127.0.0.1:2376
+  cacert: |
+    -----BEGIN CERTIFICATE-----
+    ...
+    -----END CERTIFICATE-----
+  cert: |
+    -----BEGIN CERTIFICATE-----
+    ...
+    -----END CERTIFICATE-----
+  key: |
+    -----BEGIN RSA PRIVATE KEY-----
+    ...
+    -----END RSA PRIVATE KEY-----
+</code></pre>
+
+<h2 id="changing-the-container-image">Changing the container image<a class="headerlink" href="#changing-the-container-image" title="Permanent link">&para;</a></h2>
+<p>The container image depends on the backend you are using. For <code>dockerrun</code> you can change the image in the config
+file:</p>
+<pre><code class="yaml">dockerrun:
+  config:
+    container:
+      image: your/image
+</code></pre>
+
+<h2 id="detailed-configuration">Detailed configuration<a class="headerlink" href="#detailed-configuration" title="Permanent link">&para;</a></h2>
+<p>The full configuration at the time of writing are as described below. Keep in mind that the configuration structure
+may change over time as they follow the
+<a href="https://docs.docker.com/engine/api/v1.40/#operation/ContainerCreate">Docker API</a>.</p>
+<pre><code class="yaml">dockerrun:
+    host: tcp://127.0.0.1:2375
+    cacert: &quot;&quot;
+    cert: &quot;&quot;
+    key: &quot;&quot;
+    config:
+        container:
+            hostname: &quot;&quot;
+            domainname: &quot;&quot;
+            user: &quot;&quot;
+            # The &quot;attach&quot; options are overridden and cannot be configured
+            #attachstdin: false
+            #attachstdout: false
+            #attachstderr: false
+            exposedports: {}
+            # The &quot;tty&quot; option depends on the requested SSH mode and cannot be configured
+            #tty: false
+            # The &quot;stdin&quot; options are also configured by the backend
+            #openstdin: false
+            #stdinonce: false
+            # Env can be configured but will be overridden by the values provided via SSH
+            env: []
+            # CMD can be provided but will be overridden by the command sent via SSH
+            cmd: []
+            healthcheck: null
+            argsescaped: false
+            image: janoszen/containerssh-image
+            volumes: {}
+            workingdir: &quot;&quot;
+            entrypoint: []
+            networkdisabled: false
+            macaddress: &quot;&quot;
+            onbuild: []
+            labels: {}
+            stopsignal: &quot;&quot;
+            stoptimeout: null
+            shell: []
+        host:
+            binds: []
+            containeridfile: &quot;&quot;
+            logconfig:
+                type: &quot;&quot;
+                config: {}
+            networkmode: &quot;&quot;
+            portbindings: {}
+            restartpolicy:
+                name: &quot;&quot;
+                maximumretrycount: 0
+            autoremove: false
+            volumedriver: &quot;&quot;
+            volumesfrom: []
+            capadd: []
+            capdrop: []
+            dns: []
+            dnsoptions: []
+            dnssearch: []
+            extrahosts: []
+            groupadd: []
+            ipcmode: &quot;&quot;
+            cgroup: &quot;&quot;
+            links: []
+            oomscoreadj: 0
+            pidmode: &quot;&quot;
+            privileged: false
+            publishallports: false
+            readonlyrootfs: false
+            securityopt: []
+            storageopt: {}
+            tmpfs: {}
+            utsmode: &quot;&quot;
+            usernsmode: &quot;&quot;
+            shmsize: 0
+            sysctls: {}
+            runtime: &quot;&quot;
+            consolesize:
+              - 0
+              - 0
+            isolation: &quot;&quot;
+            resources:
+                cpushares: 0
+                memory: 0
+                nanocpus: 0
+                cgroupparent: &quot;&quot;
+                blkioweight: 0
+                blkioweightdevice: []
+                blkiodevicereadbps: []
+                blkiodevicewritebps: []
+                blkiodevicereadiops: []
+                blkiodevicewriteiops: []
+                cpuperiod: 0
+                cpuquota: 0
+                cpurealtimeperiod: 0
+                cpurealtimeruntime: 0
+                cpusetcpus: &quot;&quot;
+                cpusetmems: &quot;&quot;
+                devices: []
+                diskquota: 0
+                kernelmemory: 0
+                memoryreservation: 0
+                memoryswap: 0
+                memoryswappiness: null
+                oomkilldisable: null
+                pidslimit: 0
+                ulimits: []
+                cpucount: 0
+                cpupercent: 0
+                iomaximumiops: 0
+                iomaximumbandwidth: 0
+            mounts: []
+            init: null
+            initpath: &quot;&quot;
+        network:
+            endpointsconfig: {}
+        containername: &quot;&quot;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../kuberun/" class="btn btn-neutral float-right" title="The kuberun Backend">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../backends/" class="btn btn-neutral" title="Selecting a Backend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; Janos Pasztor and Contributors | <a href="https://projects.pasztor.at/containerssh/privacy/">Privacy Policy</a></p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/janoszen/containerssh/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../backends/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../kuberun/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

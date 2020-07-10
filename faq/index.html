@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://projects.pasztor.at/containerssh/faq/">
+  <link rel="shortcut icon" href="../img/favicon.png">
+  
+  <title>FAQ - ContainerSSH: An SSH Server That Launches Containers</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../css/custom.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "FAQ";
+    var mkdocs_page_input_path = "faq.md";
+    var mkdocs_page_url = "/containerssh/faq/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="ContainerSSH: An SSH Server that Launches Containers" />
+<meta property="og:title" content="FAQ"/>
+<meta property="og:image" content="https://projects.pasztor.at/containerssh/img/opengraph.png" />
+<meta property="og:url" content="https://projects.pasztor.at/containerssh/faq/" />
+<meta property="og:description" content="ContainerSSH is an SSH server that launches containers in Docker and Kubernetes." />
+
+<link rel="apple-touch-icon-precomposed" href="https://projects.pasztor.at/containerssh/img/tileicon.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="ContainerSSH is an SSH server that launches containers in Docker and Kubernetes." />
+<meta name="twitter:site" content="@janoszen" />
+<meta name="twitter:title" content="ContainerSSH" />
+<meta name="twitter:image" content="https://projects.pasztor.at/containerssh/img/opengraph.png" />
+<meta name="theme-color" content="#da291c" />
+<meta name="msapplication-navbutton-color" content="#da291c" />
+<meta name="application-name" content="ContainerSSH" />
+<meta name="msapplication-starturl" content="/" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="msapplication-TileImage" content="https://projects.pasztor.at/containerssh/img/tileicon.png' | url }}" />
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ContainerSSH: An SSH Server That Launches Containers</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../authserver/">Authentication Server</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../configserver/">Configuration Server</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../backends/">Selecting a Backend</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../dockerrun/">The dockerrun Backend</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../kuberun/">The kuberun Backend</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../image/">Creating an Image</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hardening/">Hardening</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">FAQ</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">API reference</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../api/authconfig/">The AuthConfig Server ⭧</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ContainerSSH: An SSH Server That Launches Containers</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>FAQ</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/janoszen/containerssh/edit/stable/docs/faq.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1>FAQ</h1>
+
+<h2 id="is-containerssh-secure">Is ContainerSSH secure?<a class="headerlink" href="#is-containerssh-secure" title="Permanent link">&para;</a></h2>
+<p>ContainerSSH depends on a number of libraries to achieve what it does. A security hole in any of the critical ones
+could mean a compromise of your container environment, especially if you are using the <code>dockerrun</code> backend. (Docker
+has no access control so a compromise means your whole host is compromised.)</p>
+<h2 id="is-containerssh-production-ready">Is ContainerSSH production-ready?<a class="headerlink" href="#is-containerssh-production-ready" title="Permanent link">&para;</a></h2>
+<p>No. ContainerSSH is very early in its development and has not undergone extensive testing yet. You should be careful
+before deploying it into production.</p>
+<h2 id="does-containerssh-delete-containers-after-it-is-done">Does ContainerSSH delete containers after it is done?<a class="headerlink" href="#does-containerssh-delete-containers-after-it-is-done" title="Permanent link">&para;</a></h2>
+<p>ContainerSSH does its best to delete containers it creates. However, at this time there is no cleanup mechanism in case
+it crashes.</p>
+<h2 id="do-i-need-to-run-containerssh-as-root">Do I need to run ContainerSSH as root?<a class="headerlink" href="#do-i-need-to-run-containerssh-as-root" title="Permanent link">&para;</a></h2>
+<p>No! In fact, you shouldn't! ContainerSSH is perfectly fine running as non-root as long as it has access to Kubernetes
+or Docker. (Granted, access to the Docker socket means it could easily launch a root process on the host.)</p>
+<h2 id="does-containerssh-support-sftp">Does ContainerSSH support SFTP?<a class="headerlink" href="#does-containerssh-support-sftp" title="Permanent link">&para;</a></h2>
+<p>Yes, but your container image must contain an SFTP server binary and your config.yaml or config server must contain the
+correct path for the server.</p>
+<h2 id="does-containerssh-support-scp">Does ContainerSSH support SCP?<a class="headerlink" href="#does-containerssh-support-scp" title="Permanent link">&para;</a></h2>
+<p>Not at this time.</p>
+<h2 id="does-containerssh-support-tcp-port-forwarding">Does ContainerSSH support TCP port forwarding?<a class="headerlink" href="#does-containerssh-support-tcp-port-forwarding" title="Permanent link">&para;</a></h2>
+<p>Not at this time. TCP port forwarding is done outside of a channel. At this time ContainerSSH launches one container
+per SSH channel, so forwarding TCP ports would mean a complete overhaul of the entire architecture. In essence the
+architecture would be changed to launch one container per session, not per channel, and use <code>exec</code> to launch a shell or
+SFTP server for the channel.</p>
+<p>However, as you might imagine that's a bit of a larger change and will need quite a bit of work.</p>
+<h2 id="does-containerssh-support-ssh-agent-forwarding">Does ContainerSSH support SSH agent forwarding?<a class="headerlink" href="#does-containerssh-support-ssh-agent-forwarding" title="Permanent link">&para;</a></h2>
+<p>Not at this time. SSH agent forwarding would require a separate binary agent within the container to proxy data.
+This is similar to how TCP port forwarding works, except that the authentication agent requests are sent on a
+per-channel basis. Additionally SSH agent forwarding is not documented well, it is proprietary to OpenSSH.
+(The request type is <code>auth-agent-req@openssh.com</code>.)</p>
+<h2 id="does-containerssh-support-x11-forwarding">Does ContainerSSH support X11 forwarding?<a class="headerlink" href="#does-containerssh-support-x11-forwarding" title="Permanent link">&para;</a></h2>
+<p>Not at this time. X11 is sent over separate channels and would most probably need the overhaul that TCP port forwarding
+requires. As X11 forwarding isn't use much any more it is unlikely that ContainerSSH will ever support it.</p>
+<h2 id="does-containerssh-support-forwarding-signals">Does ContainerSSH support forwarding signals?<a class="headerlink" href="#does-containerssh-support-forwarding-signals" title="Permanent link">&para;</a></h2>
+<p>Partially. The <code>dockerrun</code> backend supports it, the <code>kuberun</code> backend doesn't because Kubernetes itself doesn't.</p>
+<h2 id="does-containerssh-support-window-resizing">Does ContainerSSH support window resizing?<a class="headerlink" href="#does-containerssh-support-window-resizing" title="Permanent link">&para;</a></h2>
+<p>Yes.</p>
+<h2 id="does-containerssh-support-environment-variable-passing">Does ContainerSSH support environment variable passing?<a class="headerlink" href="#does-containerssh-support-environment-variable-passing" title="Permanent link">&para;</a></h2>
+<p>Yes.</p>
+<h2 id="does-containerssh-support-returning-the-exit-status">Does ContainerSSH support returning the exit status?<a class="headerlink" href="#does-containerssh-support-returning-the-exit-status" title="Permanent link">&para;</a></h2>
+<p>Partially. The <code>dockerrun</code> backend supports it, the <code>kuberun</code> backend &ldquo;does its best&rdquo; but has some
+edge cases when the connection closes before the exit status can be obtained.</p>
+<h2 id="can-containerssh-run-exec-into-existing-containers">Can ContainerSSH run exec into existing containers?<a class="headerlink" href="#can-containerssh-run-exec-into-existing-containers" title="Permanent link">&para;</a></h2>
+<p>Not at this time. The architecture needs to solidify before such a feature is implemented.</p>
+<h2 id="can-containerssh-deploy-additional-services-such-as-sidecar-containers-etc">Can ContainerSSH deploy additional services, such as sidecar containers, etc?<a class="headerlink" href="#can-containerssh-deploy-additional-services-such-as-sidecar-containers-etc" title="Permanent link">&para;</a></h2>
+<p>ContainerSSH supports the entire Kubernetes pod specification so you can launch as many containers as you want in a
+single pod. The Docker backend, however, does not support sidecar containers.</p>
+<h2 id="can-i-add-metadata-to-my-pods-with-the-kuberun-backend">Can I add metadata to my pods with the <code>kuberun</code> backend?<a class="headerlink" href="#can-i-add-metadata-to-my-pods-with-the-kuberun-backend" title="Permanent link">&para;</a></h2>
+<p>Not at this time. You may want to open up a feature request and detail your use case.</p>
+<h2 id="why-is-the-kuberun-backend-so-slow">Why is the <code>kuberun</code> backend so slow?<a class="headerlink" href="#why-is-the-kuberun-backend-so-slow" title="Permanent link">&para;</a></h2>
+<p>Kubernetes is built for scale. That means there are some tradeoffs in terms of responsiveness. This is not something
+ContainerSSH can do anything about, it just takes a bit to launch a pod. You may want to fine-tune your Kubernetes 
+cluster for responsiveness.</p>
+<h2 id="why-is-there-no-initial-prompt-with-the-kuberun-backend">Why is there no initial prompt with the <code>kuberun</code> backend?<a class="headerlink" href="#why-is-there-no-initial-prompt-with-the-kuberun-backend" title="Permanent link">&para;</a></h2>
+<p>This is a <a href="https://github.com/janoszen/containerssh/issues/12">known bug</a>. Unfortunately the <code>kuberun</code> backend was 
+built by reverse engineering kubectl as there is no documentation whatsoever on how the attach functionality works on
+pods. If you are good with Go you might want to help out here.</p>
+<h2 id="can-i-use-my-normal-kubeconfig-files">Can I use my normal kubeconfig files?<a class="headerlink" href="#can-i-use-my-normal-kubeconfig-files" title="Permanent link">&para;</a></h2>
+<p>Unfortunately, no. Kubeconfig files are parsed by kubectl and the code is quite elaborate. At this time I don't think
+adding it to ContainerSSH is wise.</p>
+<h2 id="why-does-the-kuberun-backend-have-so-many-things-it-doesnt-support">Why does the <code>kuberun</code> backend have so many things it doesn't support?<a class="headerlink" href="#why-does-the-kuberun-backend-have-so-many-things-it-doesnt-support" title="Permanent link">&para;</a></h2>
+<p>The <code>kuberun</code> backend was written by reverse engineering <code>kubectl</code>. Unfortunately the Kubernetes API is documented very
+poorly and is quirky in some places. Kubernetes is a very complex and fast moving beast so things like API
+documentation, a proper SDK and other niceties that make a developers life easy are not something that's currently 
+available.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../hardening/" class="btn btn-neutral" title="Hardening"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; Janos Pasztor and Contributors | <a href="https://projects.pasztor.at/containerssh/privacy/">Privacy Policy</a></p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/janoszen/containerssh/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../hardening/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

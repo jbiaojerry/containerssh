@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://projects.pasztor.at/containerssh/configserver/">
+  <link rel="shortcut icon" href="../img/favicon.png">
+  
+  <title>Configuration Server - ContainerSSH: An SSH Server That Launches Containers</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../css/custom.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Configuration Server";
+    var mkdocs_page_input_path = "configserver.md";
+    var mkdocs_page_url = "/containerssh/configserver/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="ContainerSSH: An SSH Server that Launches Containers" />
+<meta property="og:title" content="Configuration Server"/>
+<meta property="og:image" content="https://projects.pasztor.at/containerssh/img/opengraph.png" />
+<meta property="og:url" content="https://projects.pasztor.at/containerssh/configserver/" />
+<meta property="og:description" content="ContainerSSH is an SSH server that launches containers in Docker and Kubernetes." />
+
+<link rel="apple-touch-icon-precomposed" href="https://projects.pasztor.at/containerssh/img/tileicon.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="ContainerSSH is an SSH server that launches containers in Docker and Kubernetes." />
+<meta name="twitter:site" content="@janoszen" />
+<meta name="twitter:title" content="ContainerSSH" />
+<meta name="twitter:image" content="https://projects.pasztor.at/containerssh/img/opengraph.png" />
+<meta name="theme-color" content="#da291c" />
+<meta name="msapplication-navbutton-color" content="#da291c" />
+<meta name="application-name" content="ContainerSSH" />
+<meta name="msapplication-starturl" content="/" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="msapplication-TileImage" content="https://projects.pasztor.at/containerssh/img/tileicon.png' | url }}" />
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ContainerSSH: An SSH Server That Launches Containers</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../authserver/">Authentication Server</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Configuration Server</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../backends/">Selecting a Backend</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../dockerrun/">The dockerrun Backend</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../kuberun/">The kuberun Backend</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../image/">Creating an Image</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hardening/">Hardening</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">API reference</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../api/authconfig/">The AuthConfig Server ⭧</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ContainerSSH: An SSH Server That Launches Containers</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Configuration Server</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/janoszen/containerssh/edit/stable/docs/configserver.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1>Writing a configuration server</h1>
+
+<p>ContainerSSH has the ability to configure the backend and the launched container dynamically based on the username
+and/or IP address. To do this ContainerSSH calls out to a configuration server if configured.</p>
+<p>You have the option to dynamically change the configuration based on the username by providing a config server URL:</p>
+<pre><code class="yaml">configserver:
+  url: http://your-config-server-url/
+</code></pre>
+
+<p>Once you have this configured you can launch a HTTP server that returns a configuration fragment as described below
+on that address.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We have an <a href="../api/authconfig">OpenAPI document</a> available for the authentication and configuration server. You can
+check the exact values available there, or use the OpenAPI document to generate parts of your server code.</p>
+</div>
+<p>The config server will receive a request in following format:</p>
+<pre><code class="json">{
+  &quot;username&quot;:&quot;ssh username&quot;,
+  &quot;sessionId&quot;: &quot;ssh session ID&quot;
+}
+</code></pre>
+
+<p>Your application will have to respond in the following format:</p>
+<pre><code class="json">{
+  &quot;config&quot;: {
+    // Provide a partial configuration here 
+  }
+}
+</code></pre>
+
+<p>You can view the full configuration structure in YAML format by running <code>./containerssh --dump-config</code>. Note that your
+config server must respond in JSON format.</p>
+<p>Some configuration values cannot be overridden from the config server. These are the ones that get used before the
+connection is established, but the backends also override a few, such as <code>attachstdio</code>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../backends/" class="btn btn-neutral float-right" title="Selecting a Backend">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../authserver/" class="btn btn-neutral" title="Authentication Server"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; Janos Pasztor and Contributors | <a href="https://projects.pasztor.at/containerssh/privacy/">Privacy Policy</a></p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/janoszen/containerssh/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../authserver/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../backends/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
